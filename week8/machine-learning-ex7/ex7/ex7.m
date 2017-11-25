@@ -115,6 +115,7 @@ A = A / 255; % Divide by 255 so that all values are in the range 0 - 1
 % Size of the image
 img_size = size(A);
 
+
 % Reshape the image into an Nx3 matrix where N = number of pixels.
 % Each row will contain the Red, Green and Blue pixel values
 % This gives us our dataset matrix X that we will use K-Means on.
@@ -131,7 +132,7 @@ max_iters = 10;
 initial_centroids = kMeansInitCentroids(X, K);
 
 % Run K-Means
-[centroids, idx] = runkMeans(X, initial_centroids, max_iters);
+[centroids, idx] = runkMeans(X, initial_centroids, max_iters, true);
 
 fprintf('Program paused. Press enter to continue.\n');
 pause;
