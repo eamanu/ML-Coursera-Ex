@@ -77,7 +77,7 @@ pause;
 fprintf('\nChecking Gradients (without regularization) ... \n');
 
 %  Check gradients by running checkNNGradients
-checkCostFunction;
+checkCostFunction();
 
 fprintf('\nProgram paused. Press enter to continue.\n');
 pause;
